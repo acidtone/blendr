@@ -1,0 +1,10 @@
+:root {
+  /* Set default colour */
+  --hue: 0;
+  --sat: 100%;
+  --lum: 50%;
+  --alpha: 1;
+
+  --color: hsla(var(--hue), var(--sat), var(--lum), var(--alpha));
+  --blend-mode: normal;
+}
