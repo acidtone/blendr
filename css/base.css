@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100vw;
+  max-width: 900px;
+  margin: auto;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: auto min-content;
+  align-items: start;
+}
+
+aside {
+  margin: 2vmin;
+  padding: 1em 0;
+  background-color: rgba(0,0,0,.8);
+  color: white;
+  border-radius: .5em;
+}
+
+aside ul {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  justify-items: stretch;
+}
+
+aside li {
+  display: contents;
+}
+
+aside label, aside output {
+  justify-self: center;
+  padding: .5em 1em;
+}
+
+aside input {
+  flex-grow: 3;
+  display: block;
+}
+
+#mode-list {
+  width: 90vmin;
+  height: 90vmin;
+  padding: 0.5em;
+  border-radius: 0.5em;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+}
+
+#mode-list > * {
+  position: relative;
+}
+
+#mode-list > *::before {
+  content: '';
+
+  background: rgba(255,255,255, .5);
+  padding: .2em;
+  width: 100%;
+
+  text-align: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

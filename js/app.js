@@ -50,14 +50,6 @@ modes.addEventListener('click', function(event){
   event.stopPropagation();
 })
 
-aside.addEventListener('mouseover', function(event){
-  aside.style.setProperty('opacity',.5);
-})
-
-aside.addEventListener('mouseout', function(event){
-  aside.style.setProperty('opacity',.2);
-})
-
 aside.addEventListener('click', function(event){
   /* Needed to use the colour sliders when in single blend mode... mode */
   event.stopPropagation();
