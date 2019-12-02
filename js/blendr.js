@@ -59,11 +59,19 @@
     render: function(containerId, elementType) {
 
       // loop through modes object and append child elements for each blend mode
-      const container = document.getElementById(containerId);
-      this.blendModes.forEach(function(mode){
-        let newChild = document.createElement(elementType);
+      const container = global.document.getElementById(containerId);
+      // blendModes cannot be accessed by the global context but prototype.render can access it via enclosure (V8 magic?)
+      blendModes.forEach(function(mode){
+
+        let newChild = global.document.createElement(elementType);
+
+        // Add a hook for css attr()
         newChild.setAttribute('data-blend-mode',mode.name);
+
+        // Set background-blend-mode to make the pretty things
         newChild.style.blendMode = mode.name;
+ 
+        // Add it as a direct child to the grid/flex container (we're assuming)
         container.appendChild(newChild);
       })
       
