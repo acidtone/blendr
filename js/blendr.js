@@ -1,3 +1,6 @@
+/* This code was heavily inspired by Tony Alicea's Javascript the Weird Parts */
+ 
+// TODO: Move this to mjs module?
 (function(global){
 
   const Blendr = function () {
@@ -81,9 +84,8 @@
   };
 
   Blendr.init = function(){
+    // future fun stuff
     const self = this;
-
-    
   }
 
   /* cleans up the above code a bit */

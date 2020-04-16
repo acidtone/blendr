@@ -1,6 +1,7 @@
 @import url('reset.css');
 @import url('vars.css');
 @import url('base.css');
+/* TODO: move imports to html links or minify */
 
 body {
 
@@ -11,7 +12,7 @@ body {
   background-blend-mode: var(--blend-mode);
 }
 
-/* TODO: move side panel code to it's own module */
+/* TODO: move side panel code to it's own module? */
 
 aside {
   transition: .5s ease all;

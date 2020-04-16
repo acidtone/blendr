@@ -1,5 +1,5 @@
 :root {
-  /* Set defaults */
+  /* Set defaults. These variables are bound to form inputs */
 
   --hue: 0;
   --sat: 100%;
